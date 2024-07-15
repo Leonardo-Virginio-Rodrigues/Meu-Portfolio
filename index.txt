@@ -16,8 +16,8 @@
         <div class="interface">
           <div class="logo">
             <a href="#">
-              <!--<img src="images/logo.jpeg" alt="Logo portfolio">-->
-              <img src="https://i.imgur.com/Kfszql7.jpeg" alt="Logo portfolio">
+              <img src="images/logo.jpeg" alt="Logo portfolio">
+              <!--<img src="https://i.imgur.com/Kfszql7.jpeg" alt="Logo portfolio">-->
             </a>
           </div><!--logo-->
           
@@ -54,7 +54,7 @@
                 
               </div><!--txt topo site-->
               <div class="img-topo-site">
-                <img style="max-height:400px;"src="https://i.imgur.com/Kfszql7.jpeg" alt="">
+                <img style="max-height:400px;"src="images/logo.jpeg" alt="">
               </div><!--img topo site-->
             </div><!--flex-->
           </div><!--interface-->
