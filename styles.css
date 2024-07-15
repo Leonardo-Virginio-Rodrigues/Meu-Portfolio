@@ -31,10 +31,21 @@ body{
   transition: .2s;
 }
 
-.leonardo-contato button:hover{
+button:hover, .contate-me form .leonardo-enviar input:hover{
   box-shadow: 0px 0px 8px #009D97;
   transform: scale(1.05);
 }
+
+h2.titulo{
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
+}
+
+h2.titulo spam{
+  color:#00FFFB;
+}
+
 
 /*ESTILO DO CABEÇALHO*/
 
@@ -43,7 +54,7 @@ header{
 }
 
 header img{
-  max-height: 120px;
+  max-height: 170px;
 }
 
 header > .interface{
@@ -120,15 +131,186 @@ section.topo-do-site .flex{
 section.topo-do-site .img-topo-site img{
   position: relative;
   animation: flutuar 2s ease-in-out infinite alternate;
+  max-height:400px; 
+}
+
+/*ESTILO SOBRE MIM*/
+
+section.sobre{
+  padding: 40px 4%;
+}
+
+section.sobre .flex{
+  gap:60px;  
+}
+
+.sobre .sobre-box:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 8px #ffffff78;
   
+}
+.sobre .sobre-box{
+  color: #fff;
+  padding: 40px;
+  margin-top: 50px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.sobre .sobre-box i{
+  font-size:70px;
+  color: #00FFFB;
+}
+
+.sobre .sobre-box h3{
+  font-size: 30px;
+  margin: 15px 0;
+}
+
+/*ESTILO PROJETOS*/
+
+section.projetos{
+  padding: 80px 4%;
+}
+
+section.projetos .flex{
+  justify-content: space-around;
+  margin-top: 60px;
+}
+
+.img-projetos{
+  width: 360px;
+  height: 460px;
+  background-size: cover;
+  background-position: 100% 0%;
+  transition: 6s;
+  cursor: pointer;
+  border-radius: 40px;
+  position: relative;
+}
+
+.img-projetos:hover{
+  background-position: 100% 100%;
+}
+
+.overlay{
+  postion: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000b8;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  opacity: 0;
+  transition: .5s;
+}
+
+.overlay:hover{
+  opacity: 1;
+}
+
+/*ESTILO FORMULARIO*/
+
+section.contate-me{
+  padding: 80px 4%;
+}
+
+.contate-me form{
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.contate-me form input, form textarea{
+  width: 100%;
+  background-color: #242424;
+  border: 0;
+  outline: 0;
+  padding: 20px 15px;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 18px;
 }
 
 
+.contate-me form textarea{
+  resize: none;
+  max-height: 300px;
+}
+
+.contate-me form .leonardo-enviar{
+  margin-top: 20px;
+  text-align: center;
+}
 
 
+.contate-me input:focus, textarea:focus{
+  box-shadow: 0 0 8px #bbb;
+}
 
 
+.contate-me form .leonardo-enviar input{
+  width: 120px;
+  background-color: #00FFFB;
+  color: #000;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .2s;
+}
 
+/*ESTILIZANDO O FOOOTER*/
 
+footer{
+  padding: 40px 4%;
+  box-shadow: 0 0 40px 10px #ffffff1d;
+}
 
+.leonardo-social button{
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  border: none;
+  background-color: #00FFFB;
+  font-size: 28px;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: .2s;
+}
 
+.interface .leonardo-social button:hover{
+  
+}
+
+footer .flex{
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer img{
+  max-height: 170px;
+}
+
+footer .line-footer p i{
+  color: #00FFFB;
+  font-size: 22px;
+}
+
+footer .line-footer p a{
+  color: #FFF;
+}
+.borda{
+  border-top: 2px solid #00FFFB;
+}
+footer .line-footer{
+  padding: 20px 0;
+}
