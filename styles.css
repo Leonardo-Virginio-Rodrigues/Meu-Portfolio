@@ -1,3 +1,4 @@
+
 /*ESTILO GERAL*/
 *{
   margin: 0;
@@ -47,6 +48,12 @@ h2.titulo spam{
 }
 
 
+/*ESTILO MENU MOBILE ESCONDIDO*/
+
+.menu-mobile{
+  DISPLAY:none;
+}
+
 /*ESTILO DO CABEÇALHO*/
 
 header{
@@ -71,7 +78,7 @@ header a{
   transition: .2s;
 }
 
-header a:hover{
+header.menu-desktop a:hover{
   color: #fff;
   transform: scale(1.05);
 }
@@ -80,13 +87,10 @@ header nav ul{
   list-style-type: none;
 }
 
-header nav ul li{
+header nav.menu-desktop ul li{
   display: inline-block;
   padding: 0 40px;
 }
-
-
-
 
 
 
@@ -315,10 +319,140 @@ footer .line-footer{
   padding: 20px 0;
 }
 
+
 /*RESPONSIVIDADE*/
 
 @media screen and (max-width: 1020px){
-  .menu-desktop .leonardo-contato{
+  /*CLASSES GERAIS*/
+  
+  .flex{
+    flex-direction: column;
+  }
+  .topo-do-site .flex{
+    flex-direction: column-reverse;
+  }
+  h2.titulo{
+    font-size: 34px;
+    line-height: 30px;
+  }
+  
+  /*CABEÇALHO*/
+  .leonardo-contato, .menu-desktop{
     display: none;
   }
+  
+  /*TOPO DO SITE*/
+  
+  section.topo-do-site{
+    padding: 20px 8%;
+  }
+  
+  section.topo-do-site .flex{
+    gap: 40px;
+  }
+  
+  .topo-do-site .txt-topo-site h1{
+    font-size: 30px;
+  }
+  
+  section.topo-do-site .img-topo-site img{
+    width: 100%;
+  }
+  
+  /*ESTILO SOBRE MIM*/
+
+  section.sobre{
+    padding: 40px 8%;
+  }
+  
+  /*ESTILO PROJETOS*/
+
+  section.projetos{
+    padding: 80px 8%;
+  }
+  
+  .img-projetos{
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+  
+  section.projetos .flex{
+    gap: 60px;
+  }
+  
+  /*FOOTER*/
+  footer .line-footer{
+    text-align: center;
+  }
+  
+  /*ESTILO MENU MOBILE*/
+
+  .menu-mobile{
+    background-color: #000;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    display: block;
+    transition: .4s;
+  }
+
+  .menu-mobile.abrir-menu{
+    width: 60%;
+  }
+
+  .menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+  }
+
+  .menu-mobile nav ul{
+    text-align: right;
+  }
+
+  .menu-mobile nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+  }
+
+  .menu-mobile nav ul li a:hover{
+    background-color: #00FFFB;
+    color: #000;
+  }
+
+  .menu-mobile .btn-fechar i{
+    color: #00FFFB;
+    font-size: 30px;
+  }
+
+  .menu-mobile .btn-fechar{
+    padding: 20px 5%;
+  }
+
+  .btn-abrir-menu i{
+    color: #00FFFB;
+    font-size: 40px;
+  }
+
+
+  .overlay-menu{
+    background-color: #000000df;
+    width: 100%;
+    height:100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+  }
+  
 }
+
+
+

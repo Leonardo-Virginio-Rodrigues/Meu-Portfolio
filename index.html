@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
     <!--GOOGLE FONTES-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,31 +19,53 @@
       <header>
         <div class="interface">
           <div class="logo">
-            <a href="#">
-              <img src="images/logo.png" alt="Logo portfolio">
-              <!--<img src="https://i.imgur.com/GvzIh3q.png" alt="Logo portfolio">-->
+            <a href="#topo-do-site">
+              <!--<img src="images/logo.png" alt="Logo portfolio">-->
+              <img src="https://i.imgur.com/GvzIh3q.png" alt="Logo portfolio">
             </a>
           </div><!--logo-->
           
           <nav class="menu-desktop">
             <ul>
-              <li><a href="#">Início</a></li>
-              <li><a href="#">Sobre</a></li>
-              <li><a href="#">Projetos</a></li>
+              <li><a href="#topo-do-site">Início</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#projetos">Projetos</a></li>
             </ul>
           </nav>
           
           <div class="leonardo-contato">
-            <a href="#">
+            <a href="#contate-me">
               <button>Contato</button>
             </a>
           </div> <!--leonardo-contato-->
+          
+          <div class="btn-abrir-menu" id="btn-menu">
+            <i class="bi bi-list"></i>
+          </div><!--btn abrir menu-->
+          
+          <div class="menu-mobile" id="menu-mobile">
+            <div class="btn-fechar">
+              <i class="bi bi-x-lg"></i>
+            </div>
+            
+            <nav>
+              <ul>
+                <li><a href="#topo-do-site">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contate-me">Contato</a></li>
+              </ul>
+            </nav>
+            
+          </div><!--menu mobile-->
+          
+          <div class="overlay-menu" id="overlay-menu"></div>
           
         </div> <!--interface-->
       </header>
       
       <main>
-        <section class="topo-do-site">
+        <section class="topo-do-site" id="topo-do-site">
           <div class="interface">
             <div class="flex">
               <div class="txt-topo-site">
@@ -50,20 +73,20 @@
                 <p>Atualmente aprendendo sobre HTML, CSS e JS. Com algumas experiências em Python e MYSQL.</p>
                 
                 <div class="leonardo-contato">
-                  <a href="#">
+                  <a href="#contate-me">
                     <button>Entre em contato</button>
                   </a>
                 </div><!--leonardo contato-->
                 
               </div><!--txt topo site-->
               <div class="img-topo-site">
-                <img src="images/minha-foto.png" alt="">
+                <img src="https://i.imgur.com/maXwuQD.png" alt="">
               </div><!--img topo site-->
             </div><!--flex-->
           </div><!--interface-->
         </section><!--Topo do site-->
         
-        <section class="sobre">
+        <section class="sobre" id="sobre">
           <div class="interface">
             <h2 class="titulo">SOBRE <spam>MIM</spam></h2>
             <div class="flex">
@@ -97,18 +120,18 @@
           </div><!--interface-->
         </section><!--sobre-->
         
-        <section class="projetos">
+        <section class="projetos" id="projetos">
           <div class="interface">
             <h2 class="titulo">MEUS <spam>PROJETOS</spam></h2>
             <div class="flex">
-              <div class="img-projetos" style="background-image: url(images/meu-projeto-1.png);">
+              <div class="img-projetos" style="background-image: url(https://i.imgur.com/sl2D83i.png);">
                 <div class="overlay">Portfólio BETA</div></div>
               </div><!--img projetos-->
             </div><!--flex-->
           </div><!--interface-->
         </section><!--Projetos-->
         
-        <section class="contate-me">
+        <section class="contate-me" id="contate-me">
           <div class="interface">
             <h2 class="titulo">FALE <spam>COMIGO</spam></h2>
               <form action="">
@@ -129,7 +152,8 @@
           <div class="line-footer">
             <div class="flex">
               <div class="logo-footer">
-                <img src="images/logo.png" alt="logo">
+                <!--<img src="images/logo.png" alt="logo">-->
+                <img src="https://i.imgur.com/GvzIh3q.png" alt="logo">
               </div>
             
               <div class="leonardo-social">
@@ -149,7 +173,6 @@
       </footer>
   </body>
 </html>
-
 
 
 
