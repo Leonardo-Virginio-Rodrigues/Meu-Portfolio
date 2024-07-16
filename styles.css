@@ -314,3 +314,11 @@ footer .line-footer p a{
 footer .line-footer{
   padding: 20px 0;
 }
+
+/*RESPONSIVIDADE*/
+
+@media screen and (max-width: 1020px){
+  .menu-desktop .leonardo-contato{
+    display: none;
+  }
+}
