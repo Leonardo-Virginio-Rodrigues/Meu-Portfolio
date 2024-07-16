@@ -60,7 +60,7 @@ header{
 }
 
 header img{
-  max-height: 170px;
+  max-height: 100px;
 }
 
 header > .interface{
