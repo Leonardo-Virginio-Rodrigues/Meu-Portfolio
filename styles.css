@@ -7,6 +7,11 @@
   font-family: "Poppins", Sans-Serif;
 }
 
+html{
+  scroll-behavior: smooth;
+  transition-duration: 0.9s;
+}
+
 body{
   background-color: #000;
   height: 100vh;
@@ -72,7 +77,7 @@ header a{
   transition: .2s;
 }
 
-header.menu-desktop a:hover{
+header .menu-desktop a:hover{
   color: #fff;
   transform: scale(1.05);
 }
