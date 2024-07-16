@@ -77,7 +77,7 @@ header a{
   transition: .2s;
 }
 
-header .menu-desktop a:hover{
+.menu-desktop a:hover{
   color: #fff;
   transform: scale(1.05);
 }
