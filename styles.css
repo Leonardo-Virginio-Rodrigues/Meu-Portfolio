@@ -1,4 +1,36 @@
 
+/*ESTILIZANDO O DARK-MODE*/
+
+:root{
+  --body-bg: #fafafa;
+  --azul-neon: #52CED9;
+  --cor-letras: #000;
+  --cor-links: #5c5c5c;
+  --overlay-do-menu: #CCCCCC;
+  --btn-shadow: #009D97;
+  --sobre-shadow: #B0B0B0;
+  --overlay-projetos-bg: #B0B0B0;
+  --input-bg: #D1D1D1;
+  --shadow-input: #A6A6A6;
+  --shadow-footer: #C7C7C7;
+  --cor-btn: #fff;
+}
+
+.dark-mode:root{
+  --body-bg: #000;
+  --azul-neon: #00FFFB;
+  --cor-letras: #fff;
+  --cor-links: #5c5c5c;
+  --overlay-do-menu: #000000df;
+  --btn-shadow: #009D97;
+  --sobre-shadow: #ffffff78;
+  --overlay-projetos-bg: #000000b8;
+  --input-bg: #242424;
+  --shadow-input: #bbb;
+  --shadow-footer: #ffffff1d;
+}
+
+
 /*ESTILO GERAL*/
 *{
   margin: 0;
@@ -13,7 +45,7 @@ html{
 }
 
 body{
-  background-color: #000;
+  background-color: var(--body-bg);
   height: 100vh;
 }
 
@@ -30,26 +62,27 @@ body{
   padding: 10px 40px;,
   font-size: 18px;
   font-weight: 600;
-  background-color: #00FFFB;
+  background-color: var(--azul-neon);
   border: 0;
   border-radius: 30px;
   cursor: pointer;
   transition: .2s;
+  color: var(--cor-btn);
 }
 
 button:hover, .contate-me form .leonardo-enviar input:hover{
-  box-shadow: 0px 0px 8px #009D97;
+  box-shadow: 0px 0px 8px var(--btn-shadow);
   transform: scale(1.05);
 }
 
 h2.titulo{
-  color: #fff;
+  color: var(--cor-letras);
   font-size: 40px;
   text-align: center;
 }
 
 h2.titulo spam{
-  color:#00FFFB;
+  color:var(--azul-neon);
 }
 
 
@@ -72,13 +105,13 @@ header > .interface{
 
 header a{
   display: inline-block;
-  color: #5c5c5c;
+  color: var(--cor-links);
   text-decoration: none;
   transition: .2s;
 }
 
 .menu-desktop a:hover{
-  color: #fff;
+  color: var(--cor-letras);
   transform: scale(1.05);
 }
 
@@ -99,7 +132,7 @@ header nav.menu-desktop ul li{
 }
 
 .menu-mobile{
-  background-color: #000;
+  background-color: var(--body-bg);
   height: 100vh;
   position: fixed;
   top: 0;
@@ -123,7 +156,7 @@ header nav.menu-desktop ul li{
 }
 
 .menu-mobile nav ul li a{
-  color: #fff;
+  color: var(--cor-letras);
   font-size: 20px;
   font-weight: 300;
   padding: 20px 8%;
@@ -131,12 +164,12 @@ header nav.menu-desktop ul li{
 }
 
 .menu-mobile nav ul li a:hover{
-  background-color: #00FFFB;
-  color: #000;
+  background-color: var(--azul-neon);
+  color: var(--body-bg);
 }
 
 .menu-mobile .btn-fechar i{
-  color: #00FFFB;
+  color: var(--azul-neon);
   font-size: 30px;
 }
 
@@ -145,13 +178,13 @@ header nav.menu-desktop ul li{
 }
 
 .btn-abrir-menu i{
-  color: #00FFFB;
+  color: var(--azul-neon);
   font-size: 40px;
 }
 
 
 .overlay-menu{
-  background-color: #000000df;
+  background-color: var(--overlay-do-menu);
   width: 100%;
   height:100%;
   position: fixed;
@@ -175,17 +208,17 @@ section.topo-do-site .flex{
 }
 
 .topo-do-site .txt-topo-site h1{
-  color: #fff;
+  color: var(--cor-letras);
   font-size: 42px;
   line-height: 40px;
 }
 
 .topo-do-site .txt-topo-site h1 spam{
-  color: #00FFFB;
+  color: var(--azul-neon);
 }
 
 .topo-do-site .txt-topo-site p{
-  color: #fff;
+  color: var(--cor-letras);
   margin: 40px 0;
 }
 
@@ -216,11 +249,11 @@ section.sobre .flex{
 
 .sobre .sobre-box:hover{
   transform: scale(1.05);
-  box-shadow: 0 0 8px #ffffff78;
+  box-shadow: 0 0 8px var(--sobre-shadow);
   
 }
 .sobre .sobre-box{
-  color: #fff;
+  color: var(--cor-letras);
   padding: 40px;
   margin-top: 50px;
   border-radius: 20px;
@@ -229,7 +262,7 @@ section.sobre .flex{
 
 .sobre .sobre-box i{
   font-size:70px;
-  color: #00FFFB;
+  color: var(--azul-neon);
 }
 
 .sobre .sobre-box h3{
@@ -269,14 +302,14 @@ section.projetos .flex{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000000b8;
+  background-color: var(--overlay-projetos-bg);
   border-radius: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 24px;
   font-weight: 600;
-  color: #fff;
+  color: var(--cor-letras);
   opacity: 0;
   transition: .5s;
 }
@@ -303,12 +336,12 @@ section.contate-me{
 
 .contate-me form input, form textarea{
   width: 100%;
-  background-color: #242424;
+  background-color: var(--input-bg);
   border: 0;
   outline: 0;
   padding: 20px 15px;
   border-radius: 15px;
-  color: #fff;
+  color: var(--cor-letras);
   font-size: 18px;
 }
 
@@ -325,14 +358,14 @@ section.contate-me{
 
 
 .contate-me input:focus, textarea:focus{
-  box-shadow: 0 0 8px #bbb;
+  box-shadow: 0 0 8px var(--shadow-input);
 }
 
 
 .contate-me form .leonardo-enviar input{
   width: 120px;
-  background-color: #00FFFB;
-  color: #000;
+  background-color: var(--azul-neon);
+  color: var(--body-bg);
   font-weight: 700;
   cursor: pointer;
   transition: .2s;
@@ -342,7 +375,7 @@ section.contate-me{
 
 footer{
   padding: 40px 4%;
-  box-shadow: 0 0 40px 10px #ffffff1d;
+  box-shadow: 0 0 40px 10px var(--shadow-footer);
 }
 
 .leonardo-social button{
@@ -350,16 +383,15 @@ footer{
   height: 60px;
   border-radius: 30px;
   border: none;
-  background-color: #00FFFB;
+  background-color: var(--azul-neon);
   font-size: 28px;
   cursor: pointer;
   margin: 0 5px;
   transition: .2s;
+  color: var(--cor-btn);
 }
 
-.interface .leonardo-social button:hover{
-  
-}
+
 
 footer .flex{
   justify-content: space-between;
@@ -371,15 +403,15 @@ footer img{
 }
 
 footer .line-footer p i{
-  color: #00FFFB;
+  color: var(--azul-neon);
   font-size: 22px;
 }
 
 footer .line-footer p a{
-  color: #FFF;
+  color: var(--cor-letras);
 }
 .borda{
-  border-top: 2px solid #00FFFB;
+  border-top: 2px solid var(--azul-neon);
 }
 footer .line-footer{
   padding: 20px 0;
@@ -457,6 +489,5 @@ footer .line-footer{
   }
   
 }
-
 
 
