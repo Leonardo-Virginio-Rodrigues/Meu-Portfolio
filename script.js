@@ -1,7 +1,6 @@
 let btnMenu = document.getElementById('btn-menu')
 let menu = document.getElementById('menu-mobile')
 let overlay = document.getElementById('overlay-menu')
-const html = document.querySelector('html');
 
 btnMenu.addEventListener('click', ()=>{
   menu.classList.add('abrir-menu')
@@ -15,6 +14,10 @@ overlay.addEventListener('click', ()=>{
   menu.classList.remove('abrir-menu')
 })
 
-if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+document.addEventListener('DOMContentLoaded', function() {
+  const html = document.querySelector('html');
+  
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
     html.classList.add('dark-mode');
-}
+  }
+});
