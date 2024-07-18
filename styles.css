@@ -429,6 +429,7 @@ footer .line-footer{
   align-items: center; 
   text-align: center;
   flex-direction: column;
+   height: 100vh;
 }
 
 .mensagem-enviada .txt-mensagem-enviada h1{
